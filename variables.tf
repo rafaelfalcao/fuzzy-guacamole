@@ -43,6 +43,18 @@ variable "cidr" {
   description = "CIDR block for the VPC"
 }
 
+variable "quantity" {
+  type        = number
+  default     = 2
+  description = "Number of subnets per type we want"
+}
+
+variable "key_name" {
+  type        = string
+  default     = "myKey"
+  description = "Ec2 key pair name"
+}
+
 variable "instance_type" {
   type        = string
   default     = "t2.micro"
