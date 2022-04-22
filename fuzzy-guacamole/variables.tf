@@ -3,8 +3,13 @@ variable "domain_name" {
   description = "The domain name to use for the static site"
 }
 
-variable "project_name"{
-  default = "Fuzzy-Guacamole"
+variable "bucket_name" {
+  type        = string
+  description = "Bucket name for hosting the website"
+}
+
+variable "project_name" {
+  default     = "Fuzzy-Guacamole"
   type        = string
   description = "Name used on several resources"
 }
@@ -45,7 +50,7 @@ variable "instance_type" {
 }
 
 variable "ami" {
-  type = string
-  default = "ami-034ef92d9dd822b08"
+  type        = string
+  default     = "ami-034ef92d9dd822b08"
   description = "AMI id"
 }
