@@ -4,7 +4,7 @@ variable "domain_name" {
 }
 
 variable "project_name"{
-  default = "Project"
+  default = "Fuzzy-Guacamole"
   type        = string
   description = "Name used on several resources"
 }

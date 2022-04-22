@@ -1,1 +1,1 @@
-domain_name = "cloudops-aws.com"
+domain_name = "fuzzy-guacamole.com"
