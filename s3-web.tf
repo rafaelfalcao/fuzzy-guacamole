@@ -34,3 +34,5 @@ resource "aws_s3_object" "index_upload" {
   content_type = "text/html" #serves the index appropriately in the browser
 
 }
+
+
