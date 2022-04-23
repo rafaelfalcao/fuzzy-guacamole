@@ -23,6 +23,18 @@ resource "aws_subnet" "private" {
   }
 }
 
+resource "aws_subnet" "private_1" {
+  #count             = var.quantity
+  cidr_block        = cidrsubnet(aws_vpc.default.cidr_block, 2, 1)
+  availability_zone = data.aws_availability_zones.available.names[1]
+  vpc_id            = aws_vpc.default.id
+
+  tags = {
+    Name = "aws_subnet.private-1"
+  }
+}
+
+
 resource "aws_route_table" "default" {
   vpc_id = aws_vpc.default.id
 

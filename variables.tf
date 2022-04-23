@@ -52,7 +52,7 @@ variable "quantity" {
 variable "key_name" {
   type        = string
   default     = "myKey"
-  description = "Ec2 key pair name"
+  description = "EC2 key pair name"
 }
 
 variable "instance_type" {
@@ -65,4 +65,16 @@ variable "ami" {
   type        = string
   default     = "ami-034ef92d9dd822b08"
   description = "AMI id"
+}
+
+variable "db_username" {
+  type        = string
+  default     = "admindbuser"
+  description = "DB username"
+}
+
+variable "db_name" {
+  type        = string
+  default     = "master"
+  description = "DB name"
 }

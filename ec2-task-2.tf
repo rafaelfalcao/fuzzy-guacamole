@@ -4,7 +4,7 @@ resource "aws_instance" "task2_instance" {
   subnet_id                   = aws_subnet.private.id
   key_name                    = aws_key_pair.generated_key.key_name
   associate_public_ip_address = true
-  vpc_security_group_ids      = [aws_security_group.allow-ssh.id]
+  vpc_security_group_ids      = [aws_security_group.ec2-ssh.id]
 
   user_data = <<-EOF
         #!/bin/bash
@@ -19,14 +19,14 @@ resource "aws_instance" "task2_instance" {
   #-y argument overrides the y/n question of apt-get
 }
 
-resource "aws_security_group" "allow-ssh" {
+resource "aws_security_group" "ec2-ssh" {
   vpc_id      = aws_vpc.default.id
   name        = "allow-ssh"
   description = "security group that allows ssh and all egress traffic"
   egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
   ingress {
