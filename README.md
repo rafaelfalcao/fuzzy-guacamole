@@ -50,8 +50,8 @@ No modules.
 | [aws_s3_bucket_website_configuration.default](https://registry.terraform.io/providers/hashicorp/aws/4.10.0/docs/resources/s3_bucket_website_configuration) | resource |
 | [aws_s3_object.index_upload](https://registry.terraform.io/providers/hashicorp/aws/4.10.0/docs/resources/s3_object) | resource |
 | [aws_security_group.allow-ssh](https://registry.terraform.io/providers/hashicorp/aws/4.10.0/docs/resources/security_group) | resource |
+| [aws_security_group.db-sg](https://registry.terraform.io/providers/hashicorp/aws/4.10.0/docs/resources/security_group) | resource |
 | [aws_subnet.private](https://registry.terraform.io/providers/hashicorp/aws/4.10.0/docs/resources/subnet) | resource |
-| [aws_subnet.public](https://registry.terraform.io/providers/hashicorp/aws/4.10.0/docs/resources/subnet) | resource |
 | [aws_vpc.default](https://registry.terraform.io/providers/hashicorp/aws/4.10.0/docs/resources/vpc) | resource |
 | [tls_private_key.pk](https://registry.terraform.io/providers/hashicorp/tls/3.3.0/docs/resources/private_key) | resource |
 | [aws_availability_zones.available](https://registry.terraform.io/providers/hashicorp/aws/4.10.0/docs/data-sources/availability_zones) | data source |

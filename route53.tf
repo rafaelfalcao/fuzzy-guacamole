@@ -11,4 +11,8 @@ resource "aws_route53_record" "default" {
     zone_id                = aws_s3_bucket.web_bucket.hosted_zone_id
     evaluate_target_health = false
   }
+  depends_on = [
+    aws_s3_bucket.web_bucket,
+    aws_route53_zone
+  ]
 }
