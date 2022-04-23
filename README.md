@@ -1,19 +1,25 @@
-# Fuzzy-Guacamole
+## Fuzzy-Guacamole
 
-This terraform code deploys the necessary infrastructure for this project:
+This terraform code deploys the necessary infrastructure for the challenge.
 
-# Prepare the environment
+## Prepare the environment
 
-- Install [pre-commit](https://pre-commit.com/) and [terraform-docs](https://github.com/terraform-docs/terraform-docs)
-- Run 'pre-commit install'
-- Make sure you have configured the provider [Google Provider Configuration](https://registry.terraform.io/providers/hashicorp/google/3.71.0/docs/guides/provider_reference)
-    - 'gcloud auth list' lists all the accounts Terraform has configured
-    - 'gcloud auth application-default' manages your active Application Default Credentials
+- Make sure you have configured the provider [AWS Configuration](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)
 - Run 'terraform init' to configure the backend
 
 ## Known Issues
 
-# Architecture
+Route53 Record creation sometimes throws this error: "The argument "alias.0.name" is required, but no definition was found."
+If this happens, please just run 'terraform apply' once again.
+
+## Thoughts
+
+On the first task, I promptly considered using S3 as a solution for its high availability and simplicity regarding static web pages.
+Another solution was maybe using another EC2 with a web server with ASG or maybe an ECS cluster.
+
+On the third task, the Docker image is stored on DockerHub on my personal repository.
+This could be extended to be stored on a private ECR and use CodeBuild,
+CodeDeploy and CodePipeline in case there were to be made changes to the Dockerfile.
 
 ## Requirements
 
