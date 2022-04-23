@@ -41,7 +41,7 @@ No modules.
 |------|------|
 | [aws_instance.task2_instance](https://registry.terraform.io/providers/hashicorp/aws/4.10.0/docs/resources/instance) | resource |
 | [aws_key_pair.generated_key](https://registry.terraform.io/providers/hashicorp/aws/4.10.0/docs/resources/key_pair) | resource |
-| [aws_route53_record.default](https://registry.terraform.io/providers/hashicorp/aws/4.10.0/docs/resources/route53_record) | resource |
+| [aws_route53_record.domain](https://registry.terraform.io/providers/hashicorp/aws/4.10.0/docs/resources/route53_record) | resource |
 | [aws_route53_zone.zone](https://registry.terraform.io/providers/hashicorp/aws/4.10.0/docs/resources/route53_zone) | resource |
 | [aws_route_table.default](https://registry.terraform.io/providers/hashicorp/aws/4.10.0/docs/resources/route_table) | resource |
 | [aws_route_table_association.default](https://registry.terraform.io/providers/hashicorp/aws/4.10.0/docs/resources/route_table_association) | resource |

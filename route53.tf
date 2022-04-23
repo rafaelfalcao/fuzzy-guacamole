@@ -2,7 +2,7 @@ resource "aws_route53_zone" "zone" {
   name = var.domain_name
 }
 
-resource "aws_route53_record" "default" {
+resource "aws_route53_record" "domain" {
   zone_id = aws_route53_zone.zone.zone_id
   name    = var.domain_name
   type    = "A"
@@ -13,6 +13,6 @@ resource "aws_route53_record" "default" {
   }
   depends_on = [
     aws_s3_bucket.web_bucket,
-    aws_route53_zone
+    aws_route53_zone.zone
   ]
 }
